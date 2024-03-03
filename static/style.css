@@ -1,0 +1,176 @@
+body {
+    /* Set line height to 1.5 times the font size
+       and use the OS’s UI font as the website font
+     */
+    font: 100%/1.5 system-ui;
+   }
+
+   body { 
+    font-family: Arial, sans-serif; 
+    max-width: 100ch; /* Sets maximum width */
+    margin-inline: max(1em, (100% - 100ch) / 2); /* Centers content */
+    padding: 1em; /* Adds padding around content */
+}
+.section { 
+    margin-bottom: 20px; 
+}
+.section-header { 
+    font-size: 20px; 
+    font-weight: bold; 
+}
+:root { /* Use blue as the accent color */
+    --color-accent: #007bff; /* Define your accent color */
+    --border-color: oklch(50% 10% 200 / 40%); /* Border color with adjusted opacity */
+    color-scheme: light dark; /* Enable automatic dark mode */
+}
+
+html {
+    accent-color: var(--color-accent); /* Apply the accent color */
+}
+nav ul, nav ul li {
+    display: contents;
+}
+
+nav {
+    display: flex;
+    margin-bottom: 20px; /* Spacing below the nav bar */
+    border-bottom: 1px solid oklch(80% 3% 200); /* Bottom border for nav */
+}
+
+nav a {
+    flex: 1;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+    text-align: center; /* Center text */
+    padding: 0.5em; /* Add padding */
+}
+
+/* Style for the current page link */
+nav a.current {
+    border-bottom: 0.4em solid oklch(80% 3% 200) var(--border-color); /* Thick bottom border */
+    /* padding-bottom: calc(0.5em - 0.4em); Adjusted padding to counter border width */
+    font-weight: bold;
+}
+
+nav a:hover {
+    border-bottom: 0.4em solid var(--border-color); /* Accent color border on hover */
+    background-color: oklch(95% 5% [from var(--color-accent) h]); /* Lighter background color */
+}
+font: inherit;
+form input, form textarea, form label {
+    display: block; /* Make them behave like block elements */
+}
+
+form input, form textarea {
+    width: 100%; /* Full width for form controls */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+form {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: auto 1fr; /* Define columns */
+    gap: 1em; /* Spacing between form controls */
+}
+
+form label {
+    display: grid; /* Make labels and button grid containers */
+    grid-template-columns: subgrid; /* Use subgrid */
+    grid-column: 1 / -1; /* Span across all columns */
+}
+
+form button { /* make the width of the button auto */
+    width: auto;
+    max-width: 100px;
+}
+
+label.color-scheme {
+    position: absolute;
+    top: 1rem; 
+    right: 1rem; 
+    font-size: 80%;
+}
+
+body { 
+    font-family: Arial, sans-serif; 
+    max-width: 100ch; /* Sets maximum width */
+    margin-inline: max(1em, (100% - 100ch) / 2); /* Centers content */
+    padding: 1em; /* Adds padding around content */
+}
+.section { 
+    margin-bottom: 20px; 
+}
+.section-header { 
+    font-size: 20px; 
+    font-weight: bold; 
+}
+:root { /* Use blue as the accent color */
+    --color-accent: #007bff; /* Define your accent color */
+    --border-color: oklch(50% 10% 200 / 40%); /* Border color with adjusted opacity */
+    color-scheme: light dark; /* Enable automatic dark mode */
+}
+
+html {
+    accent-color: var(--color-accent); /* Apply the accent color */
+}
+nav ul, nav ul li {
+    display: contents;
+}
+
+nav {
+    display: flex;
+    margin-bottom: 20px; /* Spacing below the nav bar */
+    border-bottom: 1px solid oklch(80% 3% 200); /* Bottom border for nav */
+}
+
+nav a {
+    flex: 1;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+    text-align: center; /* Center text */
+    padding: 0.5em; /* Add padding */
+}
+
+/* Style for the current page link */
+nav a.current {
+    border-bottom: 0.4em solid oklch(80% 3% 200) var(--border-color); /* Thick bottom border */
+    /* padding-bottom: calc(0.5em - 0.4em); Adjusted padding to counter border width */
+    font-weight: bold;
+}
+
+nav a:hover {
+    border-bottom: 0.4em solid var(--border-color); /* Accent color border on hover */
+    background-color: oklch(95% 5% [from var(--color-accent) h]); /* Lighter background color */
+}
+font: inherit;
+form input, form textarea, form label {
+    display: block; /* Make them behave like block elements */
+}
+
+form input, form textarea {
+    width: 100%; /* Full width for form controls */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+form {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: auto 1fr; /* Define columns */
+    gap: 1em; /* Spacing between form controls */
+}
+
+form label {
+    display: grid; /* Make labels and button grid containers */
+    grid-template-columns: subgrid; /* Use subgrid */
+    grid-column: 1 / -1; /* Span across all columns */
+}
+
+form button { /* make the width of the button auto */
+    width: auto;
+    max-width: 100px;
+}
+
+label.color-scheme {
+    position: absolute;
+    top: 1rem; 
+    right: 1rem; 
+    font-size: 80%;
+}
