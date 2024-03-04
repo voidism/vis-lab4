@@ -26,6 +26,12 @@ jobs:
         run: |
           npm run build
 
+      - name: List directory structure
+        run: ls -R
+
+      - name: Make new directory if not exist
+        run: mkdir -p build
+
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
