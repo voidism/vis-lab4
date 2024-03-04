@@ -4,12 +4,11 @@ function $$ (selector, context = document) {
 	return Array.from(context.querySelectorAll(selector));
 }
 
-let base = window.location.pathname.includes('vis-lab4') ? 'vis-lab4' : '';
 let pages = [
-    { url: base + ".", title: "Home" },
-    { url: base + "projects/", title: "Projects" },
-    { url: base + "contact/", title: "Contact" },
-    { url: base + "cv/", title: "CV" },
+    { url: '.' + window.location.pathname + ".", title: "Home" },
+    { url: '.' + window.location.pathname + "projects/", title: "Projects" },
+    { url: '.' + window.location.pathname + "contact/", title: "Contact" },
+    { url: '.' + window.location.pathname + "cv/", title: "CV" },
 ];
 
 let nav = document.createElement("nav");
