@@ -1,14 +1,9 @@
+
 <script>
-import projects from '$lib/projects.json';
-import Project from '$lib/Project.svelte';
+    export let info = {};
+    let p = info;
+    export let hLevel = 2;
 </script>
-
-<svelte:head>
-	<title>Projects</title>
-</svelte:head>
-
-<h1>{ projects.length } Projects</h1>
-<!-- <pre>{ JSON.stringify(projects, null, "\t") }</pre> -->
 
 <style>
     img {
@@ -46,14 +41,9 @@ import Project from '$lib/Project.svelte';
     }
 </style>
 
+<article>
+    <svelte:element this={"h" + hLevel}>{ p.title }</svelte:element>
+    <img src="{p.image}" alt="">
+    <p>{p.description}</p>
+</article>
 
-<div class="projects">
-    {#each projects as p}
-    <Project info={p} />
-	<!-- <article>
-		<h2>{p.title}</h2>
-		<img src="{p.image}" alt="">
-		<p>{p.description}</p>
-	</article> -->
-    {/each}
-</div>

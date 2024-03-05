@@ -1,3 +1,4 @@
+
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
@@ -24,6 +25,9 @@
             <!-- <p>GPA: 4.18/4.30...</p> -->
         </article>
     </section>
+
+    <h2>Latest Projects</h2>
+    <Project info={ project } hLevel=3 />
 
     <section id="experience">
         <h2 class="section-header">Research Experiences</h2>

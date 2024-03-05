@@ -1,3 +1,11 @@
+<script>
+    import projects from '$lib/projects.json';
+    import Project from '$lib/Project.svelte';
+</script>
+
+
+
+
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
@@ -24,6 +32,13 @@
             <!-- <p>GPA: 4.18/4.30...</p> -->
         </article>
     </section>
+
+    <h2>Latest Projects</h2>
+    <div class="projects">
+        {#each projects.slice(0, 3) as p}
+        <Project info={p} hLevel=3 />
+        {/each}
+    </div>
 
     <section id="experience">
         <h2 class="section-header">Research Experiences</h2>
