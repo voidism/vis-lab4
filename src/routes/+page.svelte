@@ -1,10 +1,50 @@
 <script>
     import projects from '$lib/projects.json';
     import Project from '$lib/Project.svelte';
+    import { _profileData } from './+page.js';
 </script>
 
 
-
+<style>
+    /* dl {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+    }
+    dt {
+        grid-row: 1;
+    }
+    dd {
+        grid-row: 2;
+    } */
+    /* Additional styling */
+    dl {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-gap: 20px;
+        background: #f4f4f4;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        max-width: 600px;
+    }
+    dt {
+        font-size: 1.1em;
+        color: #333;
+        font-weight: bold;
+    }
+    dd {
+        font-size: 1.5em;
+        color: #0077cc;
+        text-align: right;
+        margin: 0;
+    }
+    dt, dd {
+        padding: 5px 0;
+    }
+    /* Additional styling */
+</style>
 
 <svelte:head>
 	<title>Home</title>
@@ -31,6 +71,28 @@
             </header>
             <!-- <p>GPA: 4.18/4.30...</p> -->
         </article>
+    </section>
+
+    <section>
+        <!-- Data display will go here -->    
+        {#await _profileData then data}
+        <section>
+            <h2>GitHub Stats</h2>
+            <dl>
+                <dt>Followers:</dt>
+                <dd>{data.followers}</dd>
+                <dt>Following:</dt>
+                <dd>{data.following}</dd>
+                <dt>Public Repos:</dt>
+                <dd>{data.public_repos}</dd>
+                <dt>Public Gists:</dt>
+                <dd>{data.public_gists}</dd>
+            </dl>
+        </section>
+    {:catch error}
+        <p class="error">Error: {error.message}</p>
+    {/await}
+        
     </section>
 
     <h2>Latest Projects</h2>

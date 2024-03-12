@@ -38,30 +38,30 @@ for (let p of pages) {
 }
 
 
-document.body.insertAdjacentHTML("afterbegin", `
-<label class="color-scheme">
-    Theme:
-    <select id="theme-select">
-        <option value="light dark">Automatic</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-    </select>
-</label>`
-);
+// document.body.insertAdjacentHTML("afterbegin", `
+// <label class="color-scheme">
+//     Theme:
+//     <select id="theme-select">
+//         <option value="light dark">Automatic</option>
+//         <option value="light">Light</option>
+//         <option value="dark">Dark</option>
+//     </select>
+// </label>`
+// );
 
-const select = document.querySelector('.color-scheme select');
+// const select = document.querySelector('.color-scheme select');
 
-select.addEventListener('input', function(event) {
-    document.documentElement.style.setProperty('color-scheme', event.target.value);
-});
+// select.addEventListener('input', function(event) {
+//     document.documentElement.style.setProperty('color-scheme', event.target.value);
+// });
 
-if ("colorScheme" in localStorage) {
-    document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
-    select.value = localStorage.colorScheme;
-}
+// if ("colorScheme" in localStorage) {
+//     document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
+//     select.value = localStorage.colorScheme;
+// }
 
-select.addEventListener('input', function(event) {
-    localStorage.colorScheme = event.target.value;
+// select.addEventListener('input', function(event) {
+//     localStorage.colorScheme = event.target.value;
 
-    document.documentElement.style.setProperty('color-scheme', event.target.value);
-});
+//     document.documentElement.style.setProperty('color-scheme', event.target.value);
+// });
