@@ -9,6 +9,7 @@ let pages = [
     { url: '.' + window.location.pathname + "projects/", title: "Projects" },
     { url: '.' + window.location.pathname + "contact/", title: "Contact" },
     { url: '.' + window.location.pathname + "cv/", title: "CV" },
+    { url: '.' + window.location.pathname + "meta/", title: "Meta" },
 ];
 
 let nav = document.createElement("nav");
